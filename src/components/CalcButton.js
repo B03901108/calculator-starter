@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 function showNotImplemented() {
   console.warn('This function is not implemented yet.');
 }
@@ -17,7 +16,6 @@ const CalcButton = (props) => {
     </button>
   );
 };
-
 
 CalcButton.propTypes = {
   className: React.PropTypes.string,

@@ -15,6 +15,7 @@ it('can assign extra class to button', () => {
   expect(element.find('button').prop('className')).toMatch(/extra/);
 });
 
+
 it('call props.onClick when button be clicked', () => {
   const onClick = jest.fn();
   const element = mount(

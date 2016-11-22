@@ -20,10 +20,6 @@ class CalcApp extends React.Component {
     this.setState({ stateStack: ['0'], showNum: '0' });
   }
 
-  showNotImplemented() {
-    console.warn('This function is not implemented yet.');
-  }
-
   optrClick(optr) {
     const len = this.state.stateStack.length;
     const tmpStack = this.state.stateStack.slice();
@@ -85,8 +81,8 @@ class CalcApp extends React.Component {
           </div>
           <div className="calc-row">
             <CalcButton onClick={this.resetState}>AC</CalcButton>
-            <CalcButton onClick={this.showNotImplemented}>+/-</CalcButton>
-            <CalcButton onClick={this.showNotImplemented}>%</CalcButton>
+            <CalcButton>+/-</CalcButton>
+            <CalcButton>%</CalcButton>
             <CalcButton className="calc-operator" onClick={this.optrClick}>÷</CalcButton>
           </div>
           <div className="calc-row">
@@ -109,7 +105,7 @@ class CalcApp extends React.Component {
           </div>
           <div className="calc-row">
             <CalcButton className="calc-number bigger-btn" onClick={this.numClick}>0</CalcButton>
-            <CalcButton className="calc-number" onClick={this.showNotImplemented}>.</CalcButton>
+            <CalcButton className="calc-number">.</CalcButton>
             <CalcButton className="calc-operator" onClick={this.optrClick}>=</CalcButton>
           </div>
         </div>
